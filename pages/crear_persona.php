@@ -12,6 +12,19 @@ if (isset($_POST['guardar'])) {
     ];
 
     try {
+        //OTRA FORMA:
+        
+        //$nombre = $_POST['nombre'];
+        //$apellido => $_POST['apellido'];
+        //$sexo = $_POST['sexo'];
+        //$edad =  $_POST['edad'];
+
+        //$consultaSQL = "INSERT INTO persona(nombre, apellido, sexo, edad) VALUES (:nombre, :apellido, :sexo, :edad)";
+        //$sentencia->execute([':nombre' => $nombre, ':apellido'=> $apellido, ':sexo' => $sexo, ':edad' => $edad]);
+        //ó
+        //$consultaSQL = "INSERT INTO persona(nombre, apellido, sexo, edad) VALUES (?,?,?,?)";
+        //$sentencia->execute([$nombre, $apellido, $sexo, $edad]);
+        
         $persona = array(
             "nombre" => $_POST['nombre'],
             "apellido" => $_POST['apellido'],
